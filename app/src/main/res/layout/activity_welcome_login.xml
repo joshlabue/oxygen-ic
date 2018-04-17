@@ -47,82 +47,121 @@
         app:layout_constraintStart_toStartOf="@+id/welcomeTitle"
         app:layout_constraintTop_toBottomOf="@+id/welcomeTitle" />
 
-    <TextView
-        android:id="@+id/districtIdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="District ID"
-        app:layout_constraintStart_toStartOf="@+id/signInLabel"
-        app:layout_constraintTop_toBottomOf="@+id/signInLabel" />
-
-    <EditText
-        android:id="@+id/districtIdField"
+    <LinearLayout
+        android:id="@+id/loginSection"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
-        android:ems="10"
-        android:enabled="false"
-        android:hint="District ID"
-        android:inputType="textCapCharacters|textCapWords|textCapSentences|textNoSuggestions"
-        android:text="Penfield Central School District "
-        android:textColor="@android:color/white"
-        android:textColorLink="@android:color/white"
-        android:textCursorDrawable="@null"
+        android:layout_marginTop="42dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/signInLabel"
-        app:layout_constraintTop_toBottomOf="@+id/districtIdLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/signInLabel">
 
-    <TextView
-        android:id="@+id/usernameLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Username"
-        app:layout_constraintStart_toStartOf="@+id/districtIdField"
-        app:layout_constraintTop_toBottomOf="@+id/districtIdField" />
+        <LinearLayout
+            android:id="@+id/districtSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="164dp">
 
-    <EditText
-        android:id="@+id/usernameField"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textNoSuggestions"
-        android:textColor="@android:color/white"
-        android:textColorLink="@android:color/white"
-        android:textCursorDrawable="@null"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/signInLabel"
-        app:layout_constraintTop_toBottomOf="@+id/usernameLabel" />
+            <TextView
+                android:id="@+id/districtIdLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="District ID"
+                app:layout_constraintStart_toStartOf="@+id/signInLabel"
+                app:layout_constraintTop_toBottomOf="@+id/signInLabel" />
 
-    <TextView
-        android:id="@+id/passwordLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Password"
-        app:layout_constraintStart_toStartOf="@+id/usernameField"
-        app:layout_constraintTop_toBottomOf="@+id/usernameField" />
+            <EditText
+                android:id="@+id/districtIdField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="District ID"
+                android:inputType="textCapCharacters|textCapWords|textCapSentences|textNoSuggestions"
+                android:text="Penfield Central School District "
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/signInLabel"
+                app:layout_constraintTop_toBottomOf="@+id/districtIdLabel" />
 
-    <EditText
-        android:id="@+id/passwordField"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/white"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white"
-        android:textColorLink="@android:color/white"
-        android:textCursorDrawable="@null"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/signInLabel"
-        app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/usernameSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="268dp">
+
+            <TextView
+                android:id="@+id/usernameLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Username"
+                app:layout_constraintStart_toStartOf="@+id/districtIdField"
+                app:layout_constraintTop_toBottomOf="@+id/districtIdField" />
+
+            <EditText
+                android:id="@+id/usernameField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textNoSuggestions"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/signInLabel"
+                app:layout_constraintTop_toBottomOf="@+id/usernameLabel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passwordSection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="348dp">
+
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Password"
+                app:layout_constraintStart_toStartOf="@+id/usernameField"
+                app:layout_constraintTop_toBottomOf="@+id/usernameField" />
+
+            <EditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/white"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/white"
+                android:textColorLink="@android:color/white"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toEndOf="@+id/welcomeTitle"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/signInLabel"
+                app:layout_constraintTop_toBottomOf="@+id/passwordLabel" />
+        </LinearLayout>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/loginButton"
@@ -130,43 +169,129 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/colorLoginAccent"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordField" />
+        app:layout_constraintTop_toBottomOf="@+id/loginSection" />
 
-    <ProgressBar
-        android:id="@+id/gettingNameProgress"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/loginStatus"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:indeterminate="true"
-        android:indeterminateTint="@android:color/white"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="@+id/passwordField"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        tools:visibility="visible" />
+        app:layout_constraintEnd_toEndOf="@+id/loginSection"
+        app:layout_constraintStart_toStartOf="@+id/loginSection"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton">
 
-    <TextView
-        android:id="@+id/textName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_weight="1"
-        android:fontFamily="sans-serif-light"
-        android:text="Loading User Data"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/gettingNameProgress"
-        app:layout_constraintStart_toEndOf="@+id/gettingNameProgress"
-        app:layout_constraintTop_toTopOf="@+id/gettingNameProgress" />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/statusName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/nameDone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/gettingNameProgress"
+                app:layout_constraintEnd_toEndOf="@+id/gettingNameProgress"
+                app:layout_constraintStart_toStartOf="@+id/gettingNameProgress"
+                app:layout_constraintTop_toTopOf="@+id/gettingNameProgress" />
+
+            <ProgressBar
+                android:id="@+id/gettingNameProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/white"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="Loading User Data"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/gettingNameProgress"
+                app:layout_constraintStart_toEndOf="@+id/gettingNameProgress"
+                app:layout_constraintTop_toTopOf="@+id/gettingNameProgress"
+                app:layout_constraintVertical_bias="1.0" />
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/statusData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statusName">
+
+            <ImageView
+                android:id="@+id/dataDone"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:scaleX="2"
+                android:scaleY="2"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/gettingDataProgress"
+                app:layout_constraintEnd_toEndOf="@+id/gettingDataProgress"
+                app:layout_constraintStart_toStartOf="@+id/gettingDataProgress"
+                app:layout_constraintTop_toTopOf="@+id/gettingDataProgress" />
+
+            <ProgressBar
+                android:id="@+id/gettingDataProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:indeterminate="true"
+                android:indeterminateTint="@android:color/white"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textData"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:text="Loading Campus Data"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@+id/gettingDataProgress"
+                app:layout_constraintStart_toEndOf="@+id/gettingDataProgress"
+                app:layout_constraintTop_toTopOf="@+id/gettingDataProgress" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
